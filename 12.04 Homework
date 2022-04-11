@@ -1,0 +1,61 @@
+1.
+n1 = input()
+n2 = input()
+n3 = input()
+
+sum = int(n1)+int(n2)+int(n3)
+mult = int(n1)*int(n2)*int(n3)
+other = int(n1)**(int(n2)/int(n3))
+print("sum:", sum, "mult:", mult, "other:", other)
+
+2.
+print("input password")
+a = input()
+if a == "goal":
+    print("Password accepted!")
+else:
+    print("Sorry, but that is the wrong password.")
+
+3. 
+a = int(input())
+print("Data Sci with Python"*a)
+
+________
+a = int(input())
+for i in range (a):
+    print("Data Sci with Python")
+
+4. 
+a = [2, 7, 11, 3, 8, 90, 144, 15, 5]
+b = int(input("input n"))
+for i in (a):
+    if b > i:
+        print(i)
+
+
+5.
+a = {"Yahoo!": 2.09, "Google": 90.15, "Bing": 3.23, "Baidu": 2.2}
+print(a)
+print(type(a))
+
+
+6.
+def sum_func():
+    n1 = 1
+    n2 = 2
+    n3 = n1+n2
+    print (n3)
+
+sum_func()
+
+7.
+class Square:
+    def sqrnm(self, n1):
+       self.result = n1*n1
+       return self.result
+
+a = Square()
+a.sqrnm(3)
+print(a.sqrnm(3))
+
+

@@ -1,0 +1,32 @@
+1.
+import csv
+with open('Location report.csv', mode='r' ) as file:
+    reader = csv.reader(file, delimiter =',')
+
+    for reader in reader:
+        print(reader)
+
+
+2.
+import csv
+n1 = input()
+with open('sheet.csv', mode = 'w') as file:
+
+    writer = csv.writer(file)
+    writer.writerow([n1])
+
+
+3.
+import csv
+append_data = 'sheet.csv'
+with open('sheet.csv', mode = 'a', newline='') as file:
+
+    writer = csv.writer(file)
+    writer.writerow([append_data])
+
+
+with open('sheet.csv', mode = 'r') as file:
+    reader = csv.reader(file, delimiter=',')
+    for row in (file):
+        print(row)
+

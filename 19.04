@@ -1,0 +1,82 @@
+
+1. 
+from matplotlib import pyplot as plt
+x = [25, 26, 27, 29, 30, 32, 33, 35, 45, 65]
+y = [1000, 2000, 3000, 2000, 4321, 3214, 3245, 5467, 8643, 2561]
+
+plt.plot(x, y)
+plt.show()
+#print(len(x))
+
+2. 
+import numpy as np
+from matplotlib import pyplot as plt
+N = 15
+
+x = np.random.rand(N)
+y = np.random.rand(N)
+plt.xlabel('Cool X')
+plt.ylabel('Cool Y')
+
+plt.scatter(x, y)
+plt.show()
+
+3.
+from matplotlib import pyplot as plt
+data = {'X':10, 'Y':15, 'W':12}
+
+key = list(data.keys())
+value = list(data.values())
+
+plt.xlabel("Cat")
+plt.ylabel("Dog")
+plt.title("Title")
+plt.bar(key, value)
+plt.show()
+
+4.
+import numpy as np
+from matplotlib import pyplot as plt
+
+fig, (ax1, ax2) = plt.subplots(nrows=2, ncols=1)
+
+animal = ('cat', 'dog', 'pigeon', 'turtle')
+y_pos = np.arange(len(animal))
+speed = np.random.rand(len(animal))
+
+ax1.barh(y_pos, speed)
+ax1.set_yticks(y_pos, labels=animal)
+ax1.set_xlabel('Speed')
+ax1.set_title('How fast are animals')
+
+ax2.pie(speed, labels=animal)
+ax2.set_title('Animals speed')
+
+plt.show()
+
+
+5.
+import numpy as np
+from matplotlib import pyplot as plt
+
+fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(nrows=2, ncols=2)
+
+animal = ('cat', 'dog', 'pigeon', 'turtle')
+y_pos = np.arange(len(animal))
+speed = np.random.rand(len(animal))
+
+ax1.barh(y_pos, speed)
+ax1.set_yticks(y_pos, labels=animal)
+ax1.set_xlabel('Speed')
+ax1.set_title('How fast are animals')
+
+ax2.pie(speed, labels=animal)
+ax2.set_title('Animals speed')
+
+ax3.scatter(y_pos, speed)
+ax3.set_title('Super Speed')
+
+ax4.plot(y_pos, speed)
+ax3.set_title('Animal Range')
+
+plt.show()
